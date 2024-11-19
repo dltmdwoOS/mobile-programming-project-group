@@ -54,6 +54,10 @@ class _TravelSummaryPageState extends State<TravelSummaryPage> {
         },
         {
           "role": "system",
+          "content": "This is something you absolutely must keep in mind. When creating a planning dictionary, you absolutely must adhere to the date. For example, if the period is 2024/11/22~2024/12/4, you must print out the entire 13-day plan."
+        },
+        {
+          "role": "system",
           "content": "You don't have to comment about total cost, total budget, ... etc. Answer correctly only in the above format."
         },
         {
@@ -82,14 +86,6 @@ class _TravelSummaryPageState extends State<TravelSummaryPage> {
         },
         {
           "role": "user",
-          "content": "I'll go to Flanders, Belgium. My budget is 1000 EUR. I'll travel for 2024/6/15 ~ 2024/6/22. I'll travel with friend. My travel style is With nature"
-        },
-        {
-          "role": "assistant",
-          "content": 'Country : Belgium\nRegion : Flanders\nCurrency : EUR\nBudget : 1000\nDeparture date : 2024/6/15,\nArrival date : 2024/6/22\nTravel companion : With friend\nTravel style : With nature\nPlan : {"2024/6/15" : "Morning: Explore the beautiful city of Ghent, visit the Ghent Cathedral and the Castle of Ghent,  Afternoon: Take a boat tour along the Leie River,  Night: Enjoy a traditional Belgian dinner and some beers in the city center", "2024/6/16" : "Morning: Visit the Flanders Fields, pay tribute to the soldiers who fought in World War I,  Afternoon: Explore the scenic town of Bruges, visit the Belfry Tower and the Church of Our Lady,  Night: Enjoy a relaxing evening at a cozy bed and breakfast", "2024/6/17" : "Morning: Take a bike tour along the Flemish countryside, ride through picturesque villages and fields,  Afternoon: Visit the Puyenbroek Arboretum, a beautiful park with a wide variety of trees,  Night: Enjoy a picnic dinner at a scenic spot", "2024/6/18" : "Morning: Visit the Kemmelberg, a hill with a beautiful view over the surrounding countryside,  Afternoon: Explore the charming town of Kortrijk, visit the Kortrijk Grote Markt and the Kortrijk Museum,  Night: Enjoy a dinner at a local trattoria", "2024/6/19" : "Morning: Visit the De Haan Nature Reserve, explore the forests and dunes along the North Sea Coast,  Afternoon: Take a scenic coastal walk along the beach,  Night: Enjoy a seafood dinner at a restaurant in Ostend", "2024/6/20" : "Morning: Visit the Oostduinkerke Beach, see the impressive sand dunes and the horse-riding dune sliders,  Afternoon: Explore the town of De Panne, visit the De Panne Abbey and the De Panne Museum,  Night: Enjoy a dinner and some live music at a local bar", "2024/6/21" : "Morning: Take a day trip to the Netherlands, visit the city of Brussel,  Afternoon: Explore the Atomium and the Europa Building,  Night: Enjoy a dinner at a rooftop restaurant with a view of the city", "2024/6/22" : "Morning: Visit the Egmontpark, a beautiful park with a zoological and botanical garden,  Afternoon: Explore the historic city center of Ghent, visit the St. Bavo\'s Cathedral,  Night: Enjoy a farewell dinner at a Michelin-starred restaurant"}'
-        },
-        {
-          "role": "user",
           "content": "I'll go to , Greenland. My budget is 400 USD. I'll travel for 2024/11/3 ~ 2024/11/5. I'll travel alone. My travel style is With nature"
         },
         {
@@ -98,15 +94,22 @@ class _TravelSummaryPageState extends State<TravelSummaryPage> {
         },
         {
           "role": "user",
+          "content": "I'll go to Cairo, Egypt. My budget is 700 USD. I'll travel for 2024/5/1 ~ 2024/5/3. I'll travel with a friend. My travel style is Culture·Art·History"
+        },
+        {
+          "role": "assistant",
+          "content": 'Country : Egypt\nState : Cairo\nCurrency : USD\nBudget : 2000\nDeparture date : 2024/11/15,\nArrival date : 2024/12/7\nTravel companion : With friend\nTravel style : Culture·Art·History\nPlan : {"2024/11/15" : "Morning: Arrive in Cairo and settle into your accommodation, Afternoon: Take a short walk around your neighborhood to familiarize yourself with the area, Night: Enjoy a welcome dinner at a traditional Egyptian restaurant, trying dishes like Koshari or Mulukhiyah", "2024/11/16" : "Morning: Visit the Great Pyramids of Giza and the Sphinx, take plenty of photos and marvel at the ancient wonders, Afternoon: Explore the Solar Boat Museum and learn about ancient Egyptian funerary practices, Night: Watch the Sound and Light Show at the Pyramids, a mesmerizing experience", "2024/11/17" : "Morning: Tour the Egyptian Museum to admire artifacts, including treasures from King Tutankhamun\'s tomb, Afternoon: Walk through Tahrir Square and learn about modern Egyptian history, Night: Enjoy a traditional dinner with live music in downtown Cairo", "2024/11/18" : "Morning: Visit the Hanging Church and other sites in Coptic Cairo to explore Egypt\'s Christian heritage, Afternoon: Explore the Gayer-Anderson Museum, an architectural gem showcasing Islamic art, Night: Relax with a traditional Egyptian tea at a local cafe", "2024/11/19" : "Morning: Take a day trip to Saqqara to see the Step Pyramid and the ancient tombs, Afternoon: Visit the Dahshur pyramids, including the Bent Pyramid and the Red Pyramid, Night: Return to Cairo and enjoy a relaxed evening", "2024/11/20" : "Morning: Explore Islamic Cairo, starting with the Citadel of Saladin and the Mosque of Muhammad Ali, Afternoon: Visit Al-Muizz Street and Khan El Khalili Bazaar for some shopping and sightseeing, Night: Have dinner at a rooftop restaurant with views of the city", "2024/11/21" : "Morning: Take a Nile River cruise to Aswan (overnight), enjoy the scenic views along the way, Afternoon: Relax on the boat and enjoy the onboard activities, Night: Relish a luxurious dinner while gliding along the Nile", "2024/11/22" : "Morning: Arrive in Aswan and visit the Aswan High Dam and the Unfinished Obelisk, Afternoon: Tour the Philae Temple, dedicated to the goddess Isis, Night: Stay in a charming hotel and enjoy Nubian cuisine for dinner", "2024/11/23" : "Morning: Take a boat trip to Abu Simbel, marvel at the colossal temples of Ramses II, Afternoon: Return to Aswan and explore the Nubian Museum to learn about the region\'s history, Night: Enjoy a relaxing evening along the Nile promenade", "2024/11/24" : "Morning: Depart for Luxor, known as the world\'s greatest open-air museum, Afternoon: Visit the Luxor Temple and stroll along the Avenue of Sphinxes, Night: Dine at a riverside restaurant in Luxor", "2024/11/25" : "Morning: Explore the Karnak Temple complex, one of the most impressive ancient sites, Afternoon: Take a felucca ride on the Nile and enjoy the serene atmosphere, Night: Attend the Sound and Light Show at Karnak Temple", "2024/11/26" : "Morning: Cross the Nile to the West Bank and visit the Valley of the Kings, including Tutankhamun\'s tomb, Afternoon: Explore the Temple of Hatshepsut and the Colossi of Memnon, Night: Relax with a dinner in a traditional Luxor setting", "2024/11/27" : "Morning: Take a hot air balloon ride over Luxor for breathtaking views, Afternoon: Visit the Luxor Museum to see its impressive collection, Night: Enjoy a quiet evening at your hotel or stroll along the Nile", "2024/11/28" : "Morning: Travel back to Cairo by train or flight, Afternoon: Relax and recover from your journey, Night: Enjoy dinner at a modern Egyptian restaurant with fusion cuisine", "2024/11/29" : "Morning: Visit the Agricultural Museum to explore Egypt\'s farming heritage, Afternoon: Tour the Manial Palace for its beautiful architecture and gardens, Night: Attend a cultural performance at the Cairo Opera House", "2024/11/30" : "Morning: Take a day trip to Fayoum, visit the Wadi El Rayan waterfalls and the Valley of the Whales (UNESCO World Heritage Site), Afternoon: Explore the pottery workshops in Tunis Village, Night: Return to Cairo and enjoy a late dinner", "2024/12/1" : "Morning: Explore modern Cairo with a visit to the Baron Empain Palace, Afternoon: Tour the bustling markets of Souq El Gomaa, Night: Enjoy a peaceful dinner in Zamalek, a trendy district", "2024/12/2" : "Morning: Visit the Museum of Islamic Art for its exquisite collection, Afternoon: Explore the Al-Azhar Park, a green oasis with panoramic views of Cairo, Night: Have dinner at a restaurant overlooking the park", "2024/12/3" : "Morning: Tour the Mokattam Hills and the Cave Church, Afternoon: Visit Garbage City to learn about its recycling efforts and community, Night: Attend a traditional Sufi dance show at Wekalet El Ghouri", "2024/12/4" : "Morning: Explore the northern area of Cairo with a visit to the Shubra Palace, Afternoon: Visit the Agricultural Land Museum for a different perspective on Egypt\'s history, Night: Relax with an evening of Egyptian cinema at a local theater", "2024/12/5" : "Morning: Visit Al-Fayoum Oasis for its natural beauty, Afternoon: Stop by the ancient ruins of Karanis, Night: Return to Cairo and have a dinner of Egyptian desserts at a famous patisserie", "2024/12/6" : "Morning: Take a private cooking class to learn traditional Egyptian recipes, Afternoon: Visit the Cairo Tower for panoramic views of the city, Night: Celebrate your last evening with a dinner cruise on the Nile", "2024/12/7" : "Morning: Do some last-minute souvenir shopping in Cairo, Afternoon: Relax and prepare for departure, Night: Depart Cairo with wonderful memories of your trip"}'
+        },
+        {
+          "role": "user",
           "content": "I'll go ${widget.country}, ${widget.state}. My budget is ${widget.budget} ${widget.currency}. I'll travel for ${widget.departureDate.toLocal().year}/${widget.departureDate.toLocal().month}/${widget.departureDate.toLocal().day} ~ ${widget.arrivalDate.toLocal().year}/${widget.arrivalDate.toLocal().month}/${widget.arrivalDate.toLocal().day}. I'll travel ${widget.companion}. My travel style is ${widget.style}."
-        }
-
+        },
       ];
       final response = await http.post(
         url,
         headers: {"Content-Type": "application/json"},
         body: jsonEncode(conversation),
-      );
+      ).timeout(const Duration(seconds: 60));
 
       if (response.statusCode == 200) {
         final responseData = jsonDecode(response.body);
@@ -114,17 +117,20 @@ class _TravelSummaryPageState extends State<TravelSummaryPage> {
         setState(() {
           _response = "Data saved successfully!";
         });
+        print(_response);
         return true;
       } else {
         setState(() {
           _response = "Error: ${response.statusCode}, ${response.reasonPhrase}";
         });
+        print(_response);
         return false;
       }
     } catch (e) {
       setState(() {
         _response = "Failed to process text: $e";
       });
+      print(_response);
       return false;
     } finally {
       setState(() {
@@ -178,11 +184,11 @@ class _TravelSummaryPageState extends State<TravelSummaryPage> {
               onPressed: () async {
                 List<String> planNames = await SharedPrefUtil.getPlanNames();
                 bool success = false;
-                if (planNames.contains(widget.planName)){
-                  success = true;
-                }
-                else{
-                  planNames.add(widget.planName);
+
+                while(!success){
+                  if (!planNames.contains(widget.planName)){
+                    planNames.add(widget.planName);
+                  }
                   await SharedPrefUtil.savePlanNames(planNames);
                   widget.onPlanAdded();
                   success = await processText();

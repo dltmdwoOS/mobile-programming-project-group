@@ -138,13 +138,13 @@ class _CalendarScreenState extends State<CalendarScreen> {
                       int daysDifference = _firstSelectedDate!.isBefore(_secondSelectedDate!)
                           ? _secondSelectedDate!.difference(_firstSelectedDate!).inDays
                           : _firstSelectedDate!.difference(_secondSelectedDate!).inDays;
-                      if (daysDifference > 21){
+                      if (daysDifference > 10){
                         showDialog(
                           context: context,
                           builder: (BuildContext context) {
                             return AlertDialog(
                               title: Text("Date Error"),
-                              content: Text("Departure and arrival dates must be within 21 days of each other."),
+                              content: Text("Departure and arrival dates must be within 10 days of each other."),
                               actions: [
                                 TextButton(
                                   child: Text("Check"),

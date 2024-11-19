@@ -69,6 +69,7 @@ class _ResultScreenState extends State<ResultScreen> {
       );
     }
 
+    print("before sort : "+data!.keys.toList().length.toString());
     List<String> sortedKeys = data!.keys.toList()
       ..sort((a, b) {
         DateTime dateA = DateTime.parse('${a.split('/')[0]}-${a.split('/')[1].padLeft(2, '0')}-${a.split('/')[2].padLeft(2, '0')}');
