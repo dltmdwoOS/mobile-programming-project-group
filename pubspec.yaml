@@ -41,8 +41,6 @@ dependencies:
   latlong2: ^0.8.1    # 위치 데이터를 위한 추가 패키지
   geocoding: ^2.0.5
   flutter_local_notifications: ^12.0.0
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   ikchatbot: ^1.0.5
 
